@@ -84,7 +84,7 @@ async function run(){
 
     let selecttable = document.querySelector('#tabledata');
 
-    selecttable.innerHTML= response.map((items)=>`
+    selecttable.innerHTML= response.product.map((items)=>`
         <tr>
            <td>${items.id}</td>
            <td><img width="100px" src="${items.imageurl}"></td>
