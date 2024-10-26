@@ -49,6 +49,33 @@ function finalupdate(){
 
 }
 
+function showaddform(){
+   let selectform = document.querySelector('#addform');
+   selectform.style.display = "block";
+}
+function add(){
+    let imageurl =  document.querySelector('#imgurl').value;
+    let pname = document.querySelector('#pname').value;
+    let bname =  document.querySelector('#bname').value;
+    let pprice = document.querySelector('#pprice').value;
+    
+    let obj = {
+        "imageurl":imageurl,
+        "pname":pname,
+        "bname" : bname,
+        "pprice" : pprice
+    }
+
+    console.log(obj)
+    fetch(`http://localhost:4000/product/`,{
+        method:"POST",
+        body:JSON.stringify(obj)
+    })
+
+
+
+}
+
 async function run(){
     let data =await fetch('http://localhost:4000/product');
     let response =await data.json();
