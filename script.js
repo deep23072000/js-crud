@@ -67,7 +67,7 @@ function add(){
     }
 
     console.log(obj)
-    fetch(`http://localhost:4000/product/`,{
+    fetch(`https://p35data.vercel.app/data.json/product`,{
         method:"POST",
         body:JSON.stringify(obj)
     })
