@@ -77,7 +77,7 @@ function add(){
 }
 
 async function run(){
-    let data =await fetch('http://localhost:4000/product');
+    let data =await fetch('https://p35data.vercel.app/data.json');
     let response =await data.json();
     console.log(data)
     console.log(response)

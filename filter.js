@@ -1,5 +1,5 @@
 async function fil(){
-    let data = await fetch('http://localhost:4000/product');
+    let data = await fetch('https://p35data.vercel.app/data.json');
     let res = await data.json();
 
     let selectopt = document.querySelector('#filvalue').value;
